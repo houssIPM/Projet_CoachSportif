@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Coach" table="COACH" catalog="db_21506847" optimistic-lock="version">
+        <id name="idcoach" type="int">
+            <column name="IDCOACH" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="metier.User" fetch="select">
+            <column name="IDUSER" />
+        </many-to-one>
+        <property name="nomcoach" type="string">
+            <column name="NOMCOACH" length="32" />
+        </property>
+        <property name="prenomcoach" type="string">
+            <column name="PRENOMCOACH" length="32" />
+        </property>
+        <property name="datenaisscoach" type="date">
+            <column name="DATENAISSCOACH" length="10" />
+        </property>
+        <property name="sexecoach" type="string">
+            <column name="SEXECOACH" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Client" table="CLIENT" catalog="db_21506847" optimistic-lock="version">
+        <id name="codec" type="java.lang.Integer">
+            <column name="CODEC" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="profil" class="metier.Profil" fetch="select">
+            <column name="CODEPRO" />
+        </many-to-one>
+        <many-to-one name="user" class="metier.User" fetch="select">
+            <column name="IDUSER" />
+        </many-to-one>
+        <property name="nomc" type="string">
+            <column name="NOMC" length="32" />
+        </property>
+        <property name="prenomc" type="string">
+            <column name="PRENOMC" length="32" />
+        </property>
+        <property name="datenaissc" type="date">
+            <column name="DATENAISSC" length="10" />
+        </property>
+        <property name="taillec" type="string">
+            <column name="TAILLEC" length="32" />
+        </property>
+        <property name="poidsc" type="string">
+            <column name="POIDSC" length="32" />
+        </property>
+        <property name="mailc" type="string">
+            <column name="MAILC" length="32" />
+        </property>
+        <property name="telc" type="string">
+            <column name="TELC" length="32" />
+        </property>
+        <property name="dateinscriptionc" type="timestamp">
+            <column name="DATEINSCRIPTIONC" length="19" />
+        </property>
+        <property name="commentaireadminc" type="string">
+            <column name="COMMENTAIREADMINC" />
+        </property>
+        <property name="statutc" type="string">
+            <column name="STATUTC" length="32" />
+        </property>
+        <property name="sexec" type="string">
+            <column name="SEXEC" length="32" />
+        </property>
+        <set name="executerCircuits" table="EXECUTER_CIRCUIT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODEC" not-null="true" />
+            </key>
+            <one-to-many class="metier.ExecuterCircuit" />
+        </set>
+        <set name="affecters" table="AFFECTER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODEC" not-null="true" />
+            </key>
+            <one-to-many class="metier.Affecter" />
+        </set>
+        <set name="evaluers" table="EVALUER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODEC" not-null="true" />
+            </key>
+            <one-to-many class="metier.Evaluer" />
+        </set>
+        <set name="executerexos" table="EXECUTEREXO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODEC" not-null="true" />
+            </key>
+            <one-to-many class="metier.Executerexo" />
+        </set>
+    </class>
+</hibernate-mapping>

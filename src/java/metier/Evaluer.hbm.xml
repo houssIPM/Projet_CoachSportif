@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Evaluer" table="EVALUER" catalog="db_21506847" optimistic-lock="version">
+        <composite-id name="id" class="metier.EvaluerId">
+            <key-property name="codes" type="int">
+                <column name="CODES" />
+            </key-property>
+            <key-property name="codec" type="int">
+                <column name="CODEC" />
+            </key-property>
+            <key-property name="dateeval" type="timestamp">
+                <column name="DATEEVAL" length="19" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="client" class="metier.Client" update="false" insert="false" fetch="select">
+            <column name="CODEC" not-null="true" />
+        </many-to-one>
+        <many-to-one name="seance" class="metier.Seance" update="false" insert="false" fetch="select">
+            <column name="CODES" not-null="true" />
+        </many-to-one>
+        <property name="bras" type="string">
+            <column name="BRAS" length="32" />
+        </property>
+        <property name="poitrine" type="string">
+            <column name="POITRINE" length="32" />
+        </property>
+        <property name="taille" type="string">
+            <column name="TAILLE" length="32" />
+        </property>
+        <property name="hanches" type="string">
+            <column name="HANCHES" length="32" />
+        </property>
+        <property name="cuisses" type="string">
+            <column name="CUISSES" length="32" />
+        </property>
+        <property name="5minallong" type="java.lang.Double">
+            <column name="5MINALLONG" precision="5" />
+        </property>
+        <property name="apresflexion" type="java.lang.Double">
+            <column name="APRESFLEXION" precision="5" />
+        </property>
+        <property name="1minallong" type="java.lang.Double">
+            <column name="1MINALLONG" precision="5" />
+        </property>
+    </class>
+</hibernate-mapping>

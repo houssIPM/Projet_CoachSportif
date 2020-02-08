@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Notifier" table="NOTIFIER" catalog="db_21506847" optimistic-lock="version">
+        <composite-id name="id" class="metier.NotifierId">
+            <key-property name="iduser" type="int">
+                <column name="IDUSER" />
+            </key-property>
+            <key-property name="iduserEnvoyer" type="int">
+                <column name="IDUSER_ENVOYER" />
+            </key-property>
+            <key-property name="datenotif" type="timestamp">
+                <column name="DATENOTIF" length="19" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="userByIduser" class="metier.User" update="false" insert="false" fetch="select">
+            <column name="IDUSER" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userByIduserEnvoyer" class="metier.User" update="false" insert="false" fetch="select">
+            <column name="IDUSER_ENVOYER" not-null="true" />
+        </many-to-one>
+        <property name="message" type="string">
+            <column name="MESSAGE" />
+        </property>
+    </class>
+</hibernate-mapping>

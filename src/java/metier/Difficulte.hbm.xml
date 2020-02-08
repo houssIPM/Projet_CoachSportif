@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Difficulte" table="DIFFICULTE" catalog="db_21506847" optimistic-lock="version">
+        <id name="coded" type="int">
+            <column name="CODED" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomd" type="string">
+            <column name="NOMD" length="32" />
+        </property>
+        <set name="executerexos" table="EXECUTEREXO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODED" not-null="true" />
+            </key>
+            <one-to-many class="metier.Executerexo" />
+        </set>
+    </class>
+</hibernate-mapping>
