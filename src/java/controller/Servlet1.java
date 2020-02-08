@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
 public class Servlet1 extends HttpServlet {
 
+    
+    String text = "";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
