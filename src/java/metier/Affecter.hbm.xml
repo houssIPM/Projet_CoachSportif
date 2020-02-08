@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Affecter" table="AFFECTER" catalog="db_21506847" optimistic-lock="version">
+        <composite-id name="id" class="metier.AffecterId">
+            <key-property name="codep" type="int">
+                <column name="CODEP" />
+            </key-property>
+            <key-property name="codec" type="int">
+                <column name="CODEC" />
+            </key-property>
+            <key-property name="dateaffectation" type="timestamp">
+                <column name="DATEAFFECTATION" length="19" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="client" class="metier.Client" update="false" insert="false" fetch="select">
+            <column name="CODEC" not-null="true" />
+        </many-to-one>
+        <many-to-one name="programme" class="metier.Programme" update="false" insert="false" fetch="select">
+            <column name="CODEP" not-null="true" />
+        </many-to-one>
+        <property name="datefin" type="timestamp">
+            <column name="DATEFIN" length="19" />
+        </property>
+        <property name="statut" type="string">
+            <column name="STATUT" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

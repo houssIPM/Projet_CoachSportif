@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Circuit" table="CIRCUIT" catalog="db_21506847" optimistic-lock="version">
+        <id name="codecir" type="int">
+            <column name="CODECIR" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomcir" type="string">
+            <column name="NOMCIR" length="32" />
+        </property>
+        <set name="seances" table="SEANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODECIR" />
+            </key>
+            <one-to-many class="metier.Seance" />
+        </set>
+        <set name="executerCircuits" table="EXECUTER_CIRCUIT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODECIR" not-null="true" />
+            </key>
+            <one-to-many class="metier.ExecuterCircuit" />
+        </set>
+        <set name="decomposerExos" table="DECOMPOSER_EXO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODECIR" not-null="true" />
+            </key>
+            <one-to-many class="metier.DecomposerExo" />
+        </set>
+    </class>
+</hibernate-mapping>

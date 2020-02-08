@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="metier.Executerexo" table="EXECUTEREXO" catalog="db_21506847" optimistic-lock="version">
+        <composite-id name="id" class="metier.ExecuterexoId">
+            <key-property name="codee" type="int">
+                <column name="CODEE" />
+            </key-property>
+            <key-property name="codec" type="int">
+                <column name="CODEC" />
+            </key-property>
+            <key-property name="coded" type="int">
+                <column name="CODED" />
+            </key-property>
+            <key-property name="codeos" type="int">
+                <column name="CODEOS" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="client" class="metier.Client" update="false" insert="false" fetch="select">
+            <column name="CODEC" not-null="true" />
+        </many-to-one>
+        <many-to-one name="difficulte" class="metier.Difficulte" update="false" insert="false" fetch="select">
+            <column name="CODED" not-null="true" />
+        </many-to-one>
+        <many-to-one name="exercice" class="metier.Exercice" update="false" insert="false" fetch="select">
+            <column name="CODEE" not-null="true" />
+        </many-to-one>
+        <many-to-one name="occurences" class="metier.Occurences" update="false" insert="false" fetch="select">
+            <column name="CODEOS" not-null="true" />
+        </many-to-one>
+        <property name="duree" type="java.lang.Integer">
+            <column name="DUREE" />
+        </property>
+        <property name="serie" type="java.lang.Integer">
+            <column name="SERIE" />
+        </property>
+        <property name="repetitionexo" type="java.lang.Integer">
+            <column name="REPETITIONEXO" />
+        </property>
+        <property name="distance" type="java.lang.Double">
+            <column name="DISTANCE" precision="5" />
+        </property>
+        <property name="ordre" type="java.lang.Integer">
+            <column name="ORDRE" />
+        </property>
+        <property name="dureedem" type="java.lang.Double">
+            <column name="DUREEDEM" precision="5" />
+        </property>
+        <property name="seriedem" type="java.lang.Integer">
+            <column name="SERIEDEM" />
+        </property>
+        <property name="repdem" type="java.lang.Integer">
+            <column name="REPDEM" />
+        </property>
+        <property name="distdem" type="java.lang.Double">
+            <column name="DISTDEM" precision="5" />
+        </property>
+    </class>
+</hibernate-mapping>
