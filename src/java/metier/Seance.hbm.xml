@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="metier.Seance" table="SEANCE" catalog="db_21506847" optimistic-lock="version">
-        <id name="codes" type="int">
+        <id name="codes" type="java.lang.Integer">
             <column name="CODES" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="circuit" class="metier.Circuit" fetch="select">
             <column name="CODECIR" />
@@ -16,9 +16,6 @@
         </property>
         <property name="isbilan" type="java.lang.Boolean">
             <column name="ISBILAN" />
-        </property>
-        <property name="isvalide" type="java.lang.Boolean">
-            <column name="ISVALIDE" />
         </property>
         <set name="comprendreExercices" table="COMPRENDRE_EXERCICE" inverse="true" lazy="true" fetch="select">
             <key>

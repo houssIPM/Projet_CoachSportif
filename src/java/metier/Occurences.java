@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -12,9 +12,10 @@ import java.util.Set;
 public class Occurences  implements java.io.Serializable {
 
 
-     private int codeos;
+     private Integer codeos;
      private Seance seance;
      private Date dateos;
+     private Boolean isvalid;
      private Set executerCircuits = new HashSet(0);
      private Set executerexos = new HashSet(0);
 
@@ -22,23 +23,22 @@ public class Occurences  implements java.io.Serializable {
     }
 
 	
-    public Occurences(int codeos, Seance seance) {
-        this.codeos = codeos;
+    public Occurences(Seance seance) {
         this.seance = seance;
     }
-    public Occurences(int codeos, Seance seance, Date dateos, Set executerCircuits, Set executerexos) {
-       this.codeos = codeos;
+    public Occurences(Seance seance, Date dateos, Boolean isvalid, Set executerCircuits, Set executerexos) {
        this.seance = seance;
        this.dateos = dateos;
+       this.isvalid = isvalid;
        this.executerCircuits = executerCircuits;
        this.executerexos = executerexos;
     }
    
-    public int getCodeos() {
+    public Integer getCodeos() {
         return this.codeos;
     }
     
-    public void setCodeos(int codeos) {
+    public void setCodeos(Integer codeos) {
         this.codeos = codeos;
     }
     public Seance getSeance() {
@@ -54,6 +54,13 @@ public class Occurences  implements java.io.Serializable {
     
     public void setDateos(Date dateos) {
         this.dateos = dateos;
+    }
+    public Boolean getIsvalid() {
+        return this.isvalid;
+    }
+    
+    public void setIsvalid(Boolean isvalid) {
+        this.isvalid = isvalid;
     }
     public Set getExecuterCircuits() {
         return this.executerCircuits;

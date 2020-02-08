@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Profil  implements java.io.Serializable {
 
 
-     private int codepro;
+     private Integer codepro;
      private String nompro;
      private Set programmes = new HashSet(0);
      private Set clients = new HashSet(0);
@@ -19,22 +19,17 @@ public class Profil  implements java.io.Serializable {
     public Profil() {
     }
 
-	
-    public Profil(int codepro) {
-        this.codepro = codepro;
-    }
-    public Profil(int codepro, String nompro, Set programmes, Set clients) {
-       this.codepro = codepro;
+    public Profil(String nompro, Set programmes, Set clients) {
        this.nompro = nompro;
        this.programmes = programmes;
        this.clients = clients;
     }
    
-    public int getCodepro() {
+    public Integer getCodepro() {
         return this.codepro;
     }
     
-    public void setCodepro(int codepro) {
+    public void setCodepro(Integer codepro) {
         this.codepro = codepro;
     }
     public String getNompro() {

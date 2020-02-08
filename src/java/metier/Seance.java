@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,11 +11,10 @@ import java.util.Set;
 public class Seance  implements java.io.Serializable {
 
 
-     private int codes;
+     private Integer codes;
      private Circuit circuit;
      private String noms;
      private Boolean isbilan;
-     private Boolean isvalide;
      private Set comprendreExercices = new HashSet(0);
      private Set evaluers = new HashSet(0);
      private Set occurenceses = new HashSet(0);
@@ -24,27 +23,21 @@ public class Seance  implements java.io.Serializable {
     public Seance() {
     }
 
-	
-    public Seance(int codes) {
-        this.codes = codes;
-    }
-    public Seance(int codes, Circuit circuit, String noms, Boolean isbilan, Boolean isvalide, Set comprendreExercices, Set evaluers, Set occurenceses, Set programmes) {
-       this.codes = codes;
+    public Seance(Circuit circuit, String noms, Boolean isbilan, Set comprendreExercices, Set evaluers, Set occurenceses, Set programmes) {
        this.circuit = circuit;
        this.noms = noms;
        this.isbilan = isbilan;
-       this.isvalide = isvalide;
        this.comprendreExercices = comprendreExercices;
        this.evaluers = evaluers;
        this.occurenceses = occurenceses;
        this.programmes = programmes;
     }
    
-    public int getCodes() {
+    public Integer getCodes() {
         return this.codes;
     }
     
-    public void setCodes(int codes) {
+    public void setCodes(Integer codes) {
         this.codes = codes;
     }
     public Circuit getCircuit() {
@@ -67,13 +60,6 @@ public class Seance  implements java.io.Serializable {
     
     public void setIsbilan(Boolean isbilan) {
         this.isbilan = isbilan;
-    }
-    public Boolean getIsvalide() {
-        return this.isvalide;
-    }
-    
-    public void setIsvalide(Boolean isvalide) {
-        this.isvalide = isvalide;
     }
     public Set getComprendreExercices() {
         return this.comprendreExercices;

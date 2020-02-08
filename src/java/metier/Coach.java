@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,7 +10,7 @@ import java.util.Date;
 public class Coach  implements java.io.Serializable {
 
 
-     private int idcoach;
+     private Integer idcoach;
      private User user;
      private String nomcoach;
      private String prenomcoach;
@@ -20,12 +20,7 @@ public class Coach  implements java.io.Serializable {
     public Coach() {
     }
 
-	
-    public Coach(int idcoach) {
-        this.idcoach = idcoach;
-    }
-    public Coach(int idcoach, User user, String nomcoach, String prenomcoach, Date datenaisscoach, String sexecoach) {
-       this.idcoach = idcoach;
+    public Coach(User user, String nomcoach, String prenomcoach, Date datenaisscoach, String sexecoach) {
        this.user = user;
        this.nomcoach = nomcoach;
        this.prenomcoach = prenomcoach;
@@ -33,11 +28,11 @@ public class Coach  implements java.io.Serializable {
        this.sexecoach = sexecoach;
     }
    
-    public int getIdcoach() {
+    public Integer getIdcoach() {
         return this.idcoach;
     }
     
-    public void setIdcoach(int idcoach) {
+    public void setIdcoach(Integer idcoach) {
         this.idcoach = idcoach;
     }
     public User getUser() {

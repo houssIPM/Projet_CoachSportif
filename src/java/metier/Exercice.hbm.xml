@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="metier.Exercice" table="EXERCICE" catalog="db_21506847" optimistic-lock="version">
-        <id name="codee" type="int">
+        <id name="codee" type="java.lang.Integer">
             <column name="CODEE" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="nome" type="string">
             <column name="NOME" length="32" />
@@ -15,7 +15,7 @@
             <column name="IMAGEE" />
         </property>
         <property name="descriptione" type="string">
-            <column name="DESCRIPTIONE" />
+            <column name="DESCRIPTIONE" length="600" />
         </property>
         <set name="comprendreExercices" table="COMPRENDRE_EXERCICE" inverse="true" lazy="true" fetch="select">
             <key>

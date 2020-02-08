@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -26,6 +26,7 @@ public class Client  implements java.io.Serializable {
      private String commentaireadminc;
      private String statutc;
      private String sexec;
+     private byte[] photoc;
      private Set executerCircuits = new HashSet(0);
      private Set affecters = new HashSet(0);
      private Set evaluers = new HashSet(0);
@@ -34,7 +35,7 @@ public class Client  implements java.io.Serializable {
     public Client() {
     }
 
-    public Client(Profil profil, User user, String nomc, String prenomc, Date datenaissc, String taillec, String poidsc, String mailc, String telc, Date dateinscriptionc, String commentaireadminc, String statutc, String sexec, Set executerCircuits, Set affecters, Set evaluers, Set executerexos) {
+    public Client(Profil profil, User user, String nomc, String prenomc, Date datenaissc, String taillec, String poidsc, String mailc, String telc, Date dateinscriptionc, String commentaireadminc, String statutc, String sexec, byte[] photoc, Set executerCircuits, Set affecters, Set evaluers, Set executerexos) {
        this.profil = profil;
        this.user = user;
        this.nomc = nomc;
@@ -48,6 +49,7 @@ public class Client  implements java.io.Serializable {
        this.commentaireadminc = commentaireadminc;
        this.statutc = statutc;
        this.sexec = sexec;
+       this.photoc = photoc;
        this.executerCircuits = executerCircuits;
        this.affecters = affecters;
        this.evaluers = evaluers;
@@ -151,6 +153,13 @@ public class Client  implements java.io.Serializable {
     
     public void setSexec(String sexec) {
         this.sexec = sexec;
+    }
+    public byte[] getPhotoc() {
+        return this.photoc;
+    }
+    
+    public void setPhotoc(byte[] photoc) {
+        this.photoc = photoc;
     }
     public Set getExecuterCircuits() {
         return this.executerCircuits;

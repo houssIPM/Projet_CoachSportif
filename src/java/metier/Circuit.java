@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Circuit  implements java.io.Serializable {
 
 
-     private int codecir;
+     private Integer codecir;
      private String nomcir;
      private Set seances = new HashSet(0);
      private Set executerCircuits = new HashSet(0);
@@ -20,23 +20,18 @@ public class Circuit  implements java.io.Serializable {
     public Circuit() {
     }
 
-	
-    public Circuit(int codecir) {
-        this.codecir = codecir;
-    }
-    public Circuit(int codecir, String nomcir, Set seances, Set executerCircuits, Set decomposerExos) {
-       this.codecir = codecir;
+    public Circuit(String nomcir, Set seances, Set executerCircuits, Set decomposerExos) {
        this.nomcir = nomcir;
        this.seances = seances;
        this.executerCircuits = executerCircuits;
        this.decomposerExos = decomposerExos;
     }
    
-    public int getCodecir() {
+    public Integer getCodecir() {
         return this.codecir;
     }
     
-    public void setCodecir(int codecir) {
+    public void setCodecir(Integer codecir) {
         this.codecir = codecir;
     }
     public String getNomcir() {

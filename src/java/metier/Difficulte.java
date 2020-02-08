@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,28 +11,23 @@ import java.util.Set;
 public class Difficulte  implements java.io.Serializable {
 
 
-     private int coded;
+     private Integer coded;
      private String nomd;
      private Set executerexos = new HashSet(0);
 
     public Difficulte() {
     }
 
-	
-    public Difficulte(int coded) {
-        this.coded = coded;
-    }
-    public Difficulte(int coded, String nomd, Set executerexos) {
-       this.coded = coded;
+    public Difficulte(String nomd, Set executerexos) {
        this.nomd = nomd;
        this.executerexos = executerexos;
     }
    
-    public int getCoded() {
+    public Integer getCoded() {
         return this.coded;
     }
     
-    public void setCoded(int coded) {
+    public void setCoded(Integer coded) {
         this.coded = coded;
     }
     public String getNomd() {

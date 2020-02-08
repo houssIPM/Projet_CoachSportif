@@ -41,23 +41,23 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="db_21506847"/>
-  <table-filter match-name="EXERCICE"/>
-  <table-filter match-name="COACH"/>
   <table-filter match-name="COMPRENDRE_EXERCICE"/>
-  <table-filter match-name="OCCURENCES"/>
-  <table-filter match-name="REPONDRE"/>
-  <table-filter match-name="USER"/>
-  <table-filter match-name="EXECUTEREXO"/>
-  <table-filter match-name="DECOMPOSER"/>
-  <table-filter match-name="AFFECTER"/>
-  <table-filter match-name="PROFIL"/>
-  <table-filter match-name="DIFFICULTE"/>
-  <table-filter match-name="EXECUTER_CIRCUIT"/>
   <table-filter match-name="PROGRAMME"/>
+  <table-filter match-name="DECOMPOSER"/>
   <table-filter match-name="DECOMPOSER_EXO"/>
-  <table-filter match-name="SEANCE"/>
+  <table-filter match-name="DIFFICULTE"/>
+  <table-filter match-name="EXERCICE"/>
+  <table-filter match-name="EXECUTEREXO"/>
+  <table-filter match-name="REPONDRE"/>
   <table-filter match-name="EVALUER"/>
+  <table-filter match-name="COACH"/>
+  <table-filter match-name="AFFECTER"/>
+  <table-filter match-name="OCCURENCES"/>
   <table-filter match-name="CLIENT"/>
+  <table-filter match-name="SEANCE"/>
   <table-filter match-name="NOTIFIER"/>
+  <table-filter match-name="EXECUTER_CIRCUIT"/>
+  <table-filter match-name="PROFIL"/>
+  <table-filter match-name="USER"/>
   <table-filter match-name="CIRCUIT"/>
 </hibernate-reverse-engineering>

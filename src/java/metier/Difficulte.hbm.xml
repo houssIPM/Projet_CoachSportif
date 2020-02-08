@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="metier.Difficulte" table="DIFFICULTE" catalog="db_21506847" optimistic-lock="version">
-        <id name="coded" type="int">
+        <id name="coded" type="java.lang.Integer">
             <column name="CODED" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="nomd" type="string">
             <column name="NOMD" length="32" />
