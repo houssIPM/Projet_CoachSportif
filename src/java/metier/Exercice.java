@@ -1,5 +1,5 @@
 package metier;
-// Generated 2020-2-8 10:16:55 by Hibernate Tools 4.3.1
+// Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Exercice  implements java.io.Serializable {
 
 
-     private int codee;
+     private Integer codee;
      private String nome;
      private byte[] imagee;
      private String descriptione;
@@ -22,12 +22,7 @@ public class Exercice  implements java.io.Serializable {
     public Exercice() {
     }
 
-	
-    public Exercice(int codee) {
-        this.codee = codee;
-    }
-    public Exercice(int codee, String nome, byte[] imagee, String descriptione, Set comprendreExercices, Set executerexos, Set decomposerExos) {
-       this.codee = codee;
+    public Exercice(String nome, byte[] imagee, String descriptione, Set comprendreExercices, Set executerexos, Set decomposerExos) {
        this.nome = nome;
        this.imagee = imagee;
        this.descriptione = descriptione;
@@ -36,11 +31,11 @@ public class Exercice  implements java.io.Serializable {
        this.decomposerExos = decomposerExos;
     }
    
-    public int getCodee() {
+    public Integer getCodee() {
         return this.codee;
     }
     
-    public void setCodee(int codee) {
+    public void setCodee(Integer codee) {
         this.codee = codee;
     }
     public String getNome() {

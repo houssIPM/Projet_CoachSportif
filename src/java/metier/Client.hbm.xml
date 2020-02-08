@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2020-2-8 10:16:57 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2020-2-8 11:12:39 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="metier.Client" table="CLIENT" catalog="db_21506847" optimistic-lock="version">
         <id name="codec" type="java.lang.Integer">
@@ -46,6 +46,9 @@
         </property>
         <property name="sexec" type="string">
             <column name="SEXEC" length="32" />
+        </property>
+        <property name="photoc" type="binary">
+            <column name="PHOTOC" />
         </property>
         <set name="executerCircuits" table="EXECUTER_CIRCUIT" inverse="true" lazy="true" fetch="select">
             <key>
